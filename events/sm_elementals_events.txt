@@ -1,0 +1,753 @@
+# -----------------------------------------------
+# Design by Zyralynn & Rodahtnov
+# ----------------------------------------------
+
+namespace = sm_elementals
+
+event = {
+	id = sm_elementals.1
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = { NOT = { has_global_flag = sm_elementals }}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT =  { has_global_flag = sm_elementals }
+			}
+			set_global_flag = sm_elementals
+		}
+	}
+}
+
+# Cryogenesis events
+country_event = {	# Setup
+	id = sm_elementals.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_sm_cryogenesis
+	}
+
+	immediate = {
+		# Adds the trait for machines
+			if = {
+				limit = { 
+					is_machine_empire = yes
+				}
+				owner_main_species = {
+					modify_species = {
+						add_trait = trait_sm_cryogenesis_machine
+						change_scoped_species = no
+						effect = {
+							save_event_target_as = sm_cryo_target
+						}
+					}
+					every_species_pop = {
+						change_species = event_target:sm_cryo_target
+					}
+				}
+				change_dominant_species = {
+					species = event_target:sm_cryo_target
+				}
+			}
+		# /	
+		# Reforms capital
+			capital_scope = {
+				#while = {
+				#	limit = {
+				#		has_district = district_generator
+				#	}
+				#	add_district = district_generator_uncapped
+				#	remove_district = district_generator
+				#}
+				#while = {
+				#	limit = {
+				#		has_district = district_mining
+				#	}
+				#	add_district = district_mining_uncapped
+				#	remove_district = district_mining
+				#}
+				#while = {
+				#	limit = {
+				#		has_district = district_farming
+				#	}
+				#	add_district = district_farming_uncapped
+				#	remove_district = district_farming
+				#}
+				#clear_deposits = yes
+				add_deposit = d_sm_fixdistricts
+			}
+		# /	
+		# Wipes guarantees
+			capital_scope = {
+				solar_system = {
+					closest_system = {
+						limit = {
+							OR = {
+								has_star_flag = neighbor_t1
+								has_star_flag = neighbor_t1_first_colony 
+							}
+						}
+						random_system_planet = {
+							limit = { 
+								has_planet_flag = prescripted_ideal 
+							}
+							change_pc = pc_barren
+							reset_planet = yes
+						}
+					}
+					closest_system = {
+						limit = {
+							OR = {
+								has_star_flag = neighbor_t2
+								has_star_flag = neighbor_t2_second_colony
+							}
+						}
+						random_system_planet = {
+							limit = { 
+								has_planet_flag = prescripted_ideal 
+							}
+							change_pc = pc_barren
+							reset_planet = yes
+						}
+					}
+				}
+			}
+		# /	
+		# Reforms main system
+			capital_scope = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = no
+							is_colony = no
+							is_moon = no
+							NOR = {
+								has_planet_flag = sm_starting_colony_1
+								has_planet_flag = sm_starting_colony_2
+							}
+						}
+						set_planet_flag = sm_starting_colony_1
+					}
+					random_system_planet = {
+						limit = {
+							is_star = no
+							is_colony = no
+							is_moon = no
+							NOR = {
+								has_planet_flag = sm_starting_colony_1
+								has_planet_flag = sm_starting_colony_2
+							}
+						}
+						set_planet_flag = sm_starting_colony_2
+					}
+					if = {
+						limit = { 
+							num_guaranteed_colonies = 0
+						}
+						break = yes
+						# Nothing
+					}
+					else_if = {
+						limit = { 
+							num_guaranteed_colonies = 1
+						}
+						random_system_planet = {
+							limit = {
+								has_planet_flag = sm_starting_colony_1
+							}
+							change_pc = pc_arctic
+							reroll_planet = yes
+							if = {
+								limit = { 
+									planet_size < 10
+								}
+								set_planet_size = 15
+							}
+						}
+					}
+					else_if = {
+						limit = { 
+							num_guaranteed_colonies >= 2
+						}
+						random_system_planet = {
+							limit = {
+								has_planet_flag = sm_starting_colony_1
+							}
+							change_pc = pc_arctic
+							reroll_planet = yes
+							if = {
+								limit = { 
+									planet_size < 10
+								}
+								set_planet_size = 15
+							}
+						}
+						random_system_planet = {
+							limit = {
+								has_planet_flag = sm_starting_colony_2
+							}
+							change_pc = pc_arctic
+							reroll_planet = yes
+							if = {
+								limit = { 
+									planet_size < 10
+								}
+								set_planet_size = 15
+							}
+						}
+					}
+				}
+			}
+		# /	
+	}
+}
+	# Decision ( 1 year) - stage 1 (2 years) (3) - stage 2 (3 years) (5) - stage 3 (5 years) (11)
+planet_event = {				# 1
+	id = sm_elementals.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_sm_cryogenesis
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_modifier = {
+				modifier = pm_sm_cryogenesis_1
+				days = 720
+				clear_on_owner_change = yes
+			}
+			planet_event = {
+				id = sm_elementals.11
+				days = 720
+			}
+			# Saves flag for further use
+			if = {
+				limit = { 
+					is_cold = yes
+				}
+				set_planet_flag = sm_was_cold_planet
+			}
+			else_if = {
+				limit = { 
+					is_wet = yes
+				}
+				set_planet_flag = sm_was_wet_planet
+			}
+			else_if = {
+				limit = { 
+					is_dry = yes
+				}
+				set_planet_flag = sm_was_dry_planet
+			}
+			else = {
+				set_planet_flag = sm_was_else_planet
+			}
+		}
+	}
+}
+
+planet_event = {				# 2
+	id = sm_elementals.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_sm_cryogenesis
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			remove_modifier = pm_sm_cryogenesis_1		# Just in case
+			add_modifier = {
+				modifier = pm_sm_cryogenesis_2
+				days = 1080
+				clear_on_owner_change = yes
+			}
+			planet_event = {
+				id = sm_elementals.12
+				days = 1080
+			}
+		}
+	}
+}
+
+planet_event = {				# 3
+	id = sm_elementals.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_sm_cryogenesis
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			remove_modifier = pm_sm_cryogenesis_2		# Just in case
+			add_modifier = {
+				modifier = pm_sm_cryogenesis_3
+				days = 1800
+				clear_on_owner_change = yes
+			}
+			planet_event = {
+				id = sm_elementals.14
+				days = 1800
+			}
+		}
+	}
+}
+
+planet_event = {				# 4
+	id = sm_elementals.14
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_sm_cryogenesis
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			# Changes the planet
+			clear_deposits = yes
+			change_pc = pc_sm_cryoworld
+			add_deposit = d_sm_fixdistricts
+			# Creates the message
+			owner = {
+				create_message = {
+					type = MESSAGE_SM_CRYOTERRAFORMATION
+					localization = MESSAGE_SM_CRYOTERRAFORMATION
+					days = 30
+					target = PREV
+					variable = {
+						type = name
+						localization = PLANET
+						scope = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+
+	# Planet de-cryo
+planet_event = {
+	id = sm_elementals.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_origin = origin_sm_cryogenesis
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			# Changes the planet
+			if = {
+				limit = { 
+					has_planet_flag = sm_was_cold_planet
+				}
+				random_list = {
+					33 = { 
+						change_pc = pc_arctic
+					}
+					33 = { 
+						change_pc = pc_alpine
+					}
+					33 = { 
+						change_pc = pc_tundra
+					}
+					1 = { 
+						change_pc = pc_gaia
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					has_planet_flag = sm_was_wet_planet
+				}
+				random_list = {
+					33 = { 
+						change_pc = pc_continental
+					}
+					33 = { 
+						change_pc = pc_ocean
+					}
+					33 = { 
+						change_pc = pc_tropical
+					}
+					1 = { 
+						change_pc = pc_gaia
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					has_planet_flag = sm_was_dry_planet
+				}
+				random_list = {
+					33 = { 
+						change_pc = pc_savannah
+					}
+					33 = { 
+						change_pc = pc_desert
+					}
+					33 = { 
+						change_pc = pc_arid
+					}
+					1 = { 
+						change_pc = pc_gaia
+					}
+				}
+			}
+			else = {
+				random_list = {
+					10 = { 
+						change_pc = pc_arctic
+					}
+					10 = { 
+						change_pc = pc_alpine
+					}
+					10 = { 
+						change_pc = pc_tundra
+					}
+					10 = { 
+						change_pc = pc_continental
+					}
+					10 = { 
+						change_pc = pc_tropical
+					}
+					10 = { 
+						change_pc = pc_ocean
+					}
+					10 = { 
+						change_pc = pc_savannah
+					}
+					10 = { 
+						change_pc = pc_desert
+					}
+					10 = { 
+						change_pc = pc_arid
+					}
+					10 = { 
+						change_pc = pc_gaia
+					}
+				}
+			}
+			clear_deposits = yes
+			reroll_planet = yes
+			
+			# Creates the message
+			owner = {
+				create_message = {
+					type = MESSAGE_SM_DECRYOTERRAFORMATION
+					localization = MESSAGE_SM_DECRYOTERRAFORMATION
+					days = 30
+					target = PREV
+					variable = {
+						type = name
+						localization = PLANET
+						scope = prev
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# Hibernation
+event = {
+	id = sm_elementals.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = sm_elementals
+	}
+
+	immediate = {
+		set_timed_global_flag = {
+			flag = sm_cryohibernation_spring_on
+			months = 3
+		}
+		set_timed_global_flag = {
+			flag = sm_cryohibernation_winter_off
+			months = 9
+		}
+	}
+}
+
+# Civics
+country_event = {	# Setup
+	id = sm_elementals.200
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_valid_civic = civic_sm_iceminers
+			has_valid_civic = civic_sm_corporate_iceminers
+			has_valid_civic = civic_sm_hive_iceminers
+			has_valid_civic = civic_sm_machine_iceminers
+		}
+	}
+
+	immediate = {
+		capital_scope = {
+			while = {
+				count = 2
+				remove_district = district_mining
+				remove_district = district_mining_uncapped
+				add_district = district_sm_glacial
+			}
+
+		}
+	}
+}
+
+
+# Planetkiller
+planet_event = {
+	id = sm_elementals.500
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from.owner = { country_event = { id = sm_elementals.501 } }
+		
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+				}
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
+			from.owner = {
+				set_timed_country_flag = { flag = resolution_breached_fired_deluge days = 3600 }
+			}
+		}
+		if = { #you've basically shortcutted terraforming. Yep, that's a breach
+			limit = {
+				exists = space_owner
+				space_owner = {
+					is_same_value = from.owner
+				}
+				OR = {
+					NOT = { exists = owner }
+					owner = { is_same_value = from.owner }
+				}
+				OR = {
+					is_active_resolution = "resolution_ecology_environmental_control_board"
+					is_active_resolution = "resolution_ecology_paradise_initiative"
+				}
+			}
+			from.owner = {
+				set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+			}
+		}
+
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			add_threat = { who = from.owner amount = 3 }
+			# modifier for allies + those upset by robots
+			every_country = {
+				limit = {
+					NOR = {
+						is_same_value = from.owner
+						is_same_value = root.owner
+						AND = {
+							has_federation = yes
+							is_in_federation_with = from.owner
+						}
+					}
+					OR = {
+						has_communications = from.owner
+						has_communications = root.owner
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_sm_cryogenized_a_world
+					who = from.owner
+				}
+			}
+			# modifiers for victim
+			owner = {
+				add_opinion_modifier = {
+					modifier = opinion_sm_cryogenized_my_world
+					who = from.owner
+				}
+				if = {
+					limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+					add_modifier = {
+						modifier = colossus_victim
+						days = 10800 # 30 years
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = owner
+				owner = { is_country_type = primitive }
+			}
+			# modifier for allies + those upset by genocide
+			every_country = {
+				limit = {
+					NOR = { is_same_value = from.owner }
+					OR = {
+						has_communications = from.owner
+						has_communications = root.owner
+					}
+					is_country_type = default
+					NOR = {
+						is_xenophobe = yes
+						is_homicidal = yes
+						is_xenophile = yes
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_sm_cryogenized_a_primitive_world
+					who = from.owner
+				}
+			}
+			every_country = {
+				limit = {
+					NOR = { is_same_value = from.owner }
+					OR = {
+						has_communications = from.owner
+						has_communications = root.owner
+					}
+					OR = {
+						has_ai_personality = awakened_fallen_empire_xenophile
+						AND = {
+							is_country_type = default
+							is_xenophile = yes
+						}
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_sm_cryogenized_a_primitive_world_phile
+					who = from.owner
+				}
+			}
+		}
+		# Add war exhaustion to planet owner
+		if = {
+			limit = {
+				exists = owner
+				owner = { NOT = { is_same_value = from.owner } }
+			}
+			owner = {
+				if = {
+					limit = { #isn't the case when the crisis bombards planets, for instance
+						is_at_war_with = from.owner
+					}
+					add_static_war_exhaustion = {
+						attacker = from.owner
+						location = root
+						value_for_planet_destruction = 1.0
+					}
+				}
+			}
+		}
+
+		every_owned_pop = {
+			limit = {
+				NOR = { 
+					has_trait = trait_pc_sm_cryoworld_preference
+					has_trait = trait_sm_cryogenesis_machine
+				}
+			}
+			kill_pop = yes
+			from.owner = {
+				if = {
+					limit = { has_ascension_perk = ap_become_the_crisis }
+					complete_crisis_objective = crisobj_purge_pops
+				}
+			}
+		}
+		if = {
+			limit = { #were there any Cryo pops? If so, the ownership needs to be flipped
+				any_owned_pop = {
+					is_scope_valid = yes
+					exists = this
+				}
+				owner = {
+					NOT = { is_same_value = from.owner }
+				}
+			}
+			set_owner = from.owner
+		}
+		change_pc = pc_sm_cryoworld
+		clear_deposits = yes
+		add_deposit = d_sm_fixdistricts
+	}
+}
+
+country_event = {
+	id = sm_elementals.501
+	title = sm_elementals.501.name
+	desc = sm_elementals.501.desc
+	picture = GFX_evt_death_from_above
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fired_deluge }
+	}
+
+	immediate = {
+		set_country_flag = fired_deluge
+	}
+
+	option = {
+		name = EXCELLENT
+		from = {
+			custom_tooltip = sm_elementals.501.tooltip
+		}
+	}
+}

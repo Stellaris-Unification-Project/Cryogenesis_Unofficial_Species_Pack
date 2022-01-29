@@ -1,0 +1,7 @@
+
+component_set = { # Cryoray
+	key = "PLANET_KILLER_SM_CRYORAY"
+
+	icon = "GFX_ship_part_sm_cryoray"
+	icon_frame = 1
+}

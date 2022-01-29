@@ -1,0 +1,184 @@
+﻿# -----------------------------------------------
+# By Zyralynn & Rodahtnov
+# ----------------------------------------------
+
+l_english:
+
+# Species
+ sm_ELEMENTAL:0 "Elemental"
+ sm_ELEMENTAL_plural:0 "Elementals"
+ sm_ELEMENTAL_desc:0 "Species Class has no effect on your Empire, but Elemental-class Species may consider other Elementals to be less alien than other Species Classes."
+ sm_ELEMENTAL_insult_01:0 "psi-crackhead"
+ sm_ELEMENTAL_insult_plural_01:0 "psi-crackheads"
+ sm_ELEMENTAL_compliment_01:0 "great mind"
+ sm_ELEMENTAL_compliment_plural_01:0 "great minds"
+ sm_ELEMENTAL_spawn:0 "youngling"
+ sm_ELEMENTAL_spawn_plural:0 "younglings"
+ sm_ELEMENTAL_sound_01:0 "growling"
+ sm_ELEMENTAL_sound_02:0 "gruntling"
+ sm_ELEMENTAL_sound_03:0 "yapping"
+ sm_ELEMENTAL_sound_04:0 "yowling"
+ sm_ELEMENTAL_sound_05:0 "mewling"
+ sm_ELEMENTAL_organ:0 "ventral sac"
+ sm_ELEMENTAL_organ_plural:0 "ventral sacs"
+ sm_ELEMENTAL_mouth:0 "mouth"
+ sm_ELEMENTAL_ear:0 "ear"
+ sm_ELEMENTAL_ear_plural:0 "ears"
+ sm_ELEMENTAL_hand:0 "hand"
+ sm_ELEMENTAL_hand_plural:0 "hands"
+ sm_ELEMENTAL_tooth:0 "tooth"
+ sm_ELEMENTAL_tooth_plural:0 "teeth"
+ sm_ELEMENTAL_fossil:0 "fossil"
+ sm_ELEMENTAL_fossil_plural:0 "fossils"
+ sm_ELEMENTAL_remnant:0 "skeleton"
+ sm_ELEMENTAL_remnant_plural:0 "skeletons"
+
+# Def
+ origin_sm_cryogenesis:0 "Cryogenesis"
+ origin_sm_cryogenesis_desc:0 "Originated in exceptionally rare conditions, the frozen surface of their original world is part of the very foundation of this species, depending on extremely low temperatures to survive.\nWherever they go, the frozen touch comes with them."
+ origin_tooltip_sm_cryogenesis_effects:0 "- Homeworld is a §H$pc_sm_cryoworld$§!, special world that is nearly impossible to inhabit to non-cryogenesis species.\n\n- Instead of Guaranteed Habitable Worlds, this empire has extra Arctic worlds on its system.\n\n- Habitability preference is set to §H$trait_pc_sm_cryoworld_preference$§!, increasing the species productive capacities on $pc_sm_cryoworld_plural$ by §G10%§!, but being impossible to remove by regular gene-modding.\nPops with the $trait_pc_sm_cryoworld_preference$ trait §Rwon't be able to survive§! on non-cold or non-perfect planets, rapidly §Rdeclining§!.\n\n- With time and effort, this empire can §HConvert§! other regular habitable planets into $pc_sm_cryoworld_plural$."
+
+ START_SCREEN_PART_ONE_SM_CRYOGENESIS:0 "In the eons since the first primitive [GetSpeciesName] communities took shape in the frozen prairies and ice-filed valleys of [GetHomeWorldName], our civilization has spread and prospered."
+
+ START_SCREEN_POST_SM_CRYOGENESIS:0 "During eons we grew as species on [GetHomeWorldName], as each [GetSpeciesName] community developed from the very planet itself; we are one with the ice, and the ice is one with us. Our kind is deeply tied to the cold and frigid world we call home, and everywhere we step in and everything we touch accompany us, being frozen and allowing our survival.\n\nNow, the stars awaits, and more worlds will also share our gift, our touch, being also blessed with the coldness and eternal breeze of our own selves, and so we will thrive there too."
+ START_SCREEN_POST_SM_CRYOGENESIS_HIVE:0 "We awoke born in the cold, in the ice, being one with [GetHomeWorldName]. Initially, the [GetSpeciesName] stood separated, isolated, discordant... but we were united ; We are one with the ice, and the ice is one with us. Our kind is deeply tied to the cold and frigid world we call home, and everywhere we step in and everything we touch accompany us, being frozen and allowing our survival.\n\nNow, the stars awaits, and more worlds will also share our gift, our touch, being also blessed with the coldness and eternal breeze of our own selves, and so we will thrive there too."
+ START_SCREEN_POST_SM_CRYOGENESIS_MACHINE:0 "Created on the surface of [GetHomeWorldName], with the ice composing it in each [GetSpeciesName] design, our design to operate in this world, unusual by estimated standards, and our way of develop has been proved extremely efficient.\n\nHaving learned how to replicate such specific conditions, we are now ready for searching new potential suitable worlds for our specific machinations, and convert any non-suitable surface into cold, efficient and frozen pathways for our development."
+
+# ------------------------------------------------------------------------
+# Planets
+ pc_sm_cryoworld:0 "Cryogenic World"
+ pc_sm_cryoworld_plural:0 "Cryogenic Worlds"
+ pc_sm_cryoworld_desc:0 "Abnormal world with a thin habitable layer, dominated by extreme low temperatures and extensive continents of pure ice and permafrost, unsuitable for any regular standard chemical based lifeform. The cold and condensed atmosphere relegates any habitable conditions to low altitudes."
+
+ pc_sm_cryoworld_adj:0 "Cryogenic"
+ mod_pc_sm_cryoworld_habitability:0 "Cryogenic Habitability"
+
+ trait_pc_sm_cryoworld_preference:0 "$trait_sm_cryogenesis$"
+ trait_pc_sm_cryoworld_preference_desc:0 "$trait_sm_cryogenesis_desc$."
+
+ trait_sm_cryogenesis_machine:0 "$trait_sm_cryogenesis$"
+ trait_sm_cryogenesis_machine_desc:0 "$trait_sm_cryogenesis_desc$."
+
+
+# ------------------------------------------------------------------------
+# Traits
+ trait_sm_cryogenesis:0 "Cryogenesis"
+ trait_sm_cryogenesis_desc:0 "§LBeing a rarity, this species has a internal temperature that reaches unnatural low amounts on the negative spectrum, being completely tied to the frozen ecosystem they inhabit.§!"
+ TRAIT_SM_CRYOGENESIS_EFFECT:0 "Job Output on Cryogenic Worlds: §E+10%§!\nHabitability on non §HCryogenic§! or §HCold§! Worlds: §R-200%§!\n§RMembers of this species will rapidly collapse and decline on non Cryogenic Environments.§!"
+
+ trait_sm_cryothermophile:0 "Hypothermophile"
+ trait_sm_cryothermophile_desc:0 "§LThis species has several natural adaptations allowing it to endure extremely low temperatures, and thrive on cold environments; not without a cost, as warm climates harm its organism.§!"
+ TRAIT_SM_CRYOTHERMOPHILE_EFFECT:0 "£mod_planet_amenities_add£ Amenities Usage on §BCold§! worlds: §G-10%§!\nHabitability on non-§BCold§! worlds: §R-20%§!\nPop output on §YArctic§! or §YCryogenic§! worlds: §G+10%§! (Effects §Einverted§! on §EDry§! worlds)\n"
+
+ trait_sm_cryohibernation:0 "Seasonal Hibernation"
+ trait_sm_cryohibernation_desc:0 "§LAdapted to cycles of low and high maintenance, most members of this species enter a stasis period during generally harsh seasons, to ensure survival.§!"
+ TRAIT_SM_CRYOHIBERNATION_EFFECT:0 "During the first three months of the year: Pop Output: §G+20%§!, £mod_planet_amenities_add£ Amenities Usage §R+10%§!\nDuring the last three months of the year: Pop Output: §R-5%§!, £mod_planet_amenities_add£ Amenities Usage §G-10%§!."
+
+ trait_sm_cryohibernation_robot:0 "Seasonal Shutdown"
+ trait_sm_cryohibernation_robot_desc:0 "§LAdapted to cycles of low and high maintenance, most members of this robotic species are preemptively shut-down to save energy and improve overall performance during generally harsh seasons.§!"
+ TRAIT_SM_CRYOHIBERNATION_ROBOT_EFFECT:0 "During the first three months of the year: Pop Output: §G+20%§!, £energy£ Energy Upkeep §R+25%§!\nDuring the last three months of the year: Pop Output: §R-10%§!, £energy£ Energy Upkeep §G-25%§!."
+
+# ------------------------------------------------------------------------
+# Civics
+ civic_sm_iceminers:0 "Ice Haulers"
+ civic_sm_iceminers_desc:0 "This civilization has discovered an efficient way of obtaining rich mineral materials by using ice-fracking techniques, generating a special type of condensed crystal that resembles a pure, permanent packet ice."
+ civic_tooltip_sm_iceminers_effects:0 "On §E(Cold Climate)§! worlds, this empire is able to build up to §Y6§! £district£ §Y$district_sm_glacial$§! Districts.\n£district£ $district_sm_glacial$ Districts are cheaper than other menial districts and provide £job_miner£ §YIce-Breaker§! jobs, specialist job that generates £minerals£ §YMinerals§! (6) and £trade_value£ §Y$TRADE_VALUE$§! (4).\n\n"
+
+ civic_sm_corporate_iceminers:0 "Ice-Trading"
+ civic_sm_corporate_iceminers_desc:0 "For this corporation, the continuous extraction and reselling of highly dense pockets of ice, both unlocking highly rich minerals and being used even as building materials is a really profitable, and as consequence, constantly promoted action."
+
+
+ civic_sm_hive_iceminers:0 "Ice Harvesters"
+ civic_sm_hive_iceminers_desc:0 "This collective value the usefulness of permafrost and dense ice, focusing on the procedural harvesting and artificial generation of it."
+
+ civic_tooltip_sm_hive_iceminers_effects:0 "On §E(Cold Climate)§! worlds, this empire is able to build up to §Y6§! £district£ §Y$district_sm_glacial$§!.\n£district£ $district_sm_glacial$ Districts are cheaper than other menial districts and provide £job_miner£ §YIce-Breaker Drone§! jobs, complex drone that generates high amounts of £minerals£ §YMinerals§! (6) and £amenities_no_happiness£ §YAmenities§! (4).\n\n"
+
+
+ civic_sm_machine_iceminers:0 "Ice Extractors"
+ civic_sm_machine_iceminers_desc:0 "For this Machine Consciousness, the use of low or extreme low temperature elements is the key for diverse component fabrications and structural tweaks, so they seek ways of obtaining it on an efficient way."
+
+ civic_tooltip_sm_machine_iceminers_effects:0 "On §E(Cold Climate)§! worlds, this empire is able to build up to §Y6§! £district£ §Y$district_sm_glacial$§!.\n£district£ $district_sm_glacial$ Districts are cheaper than other menial districts and provide £job_miner£ §YIce-Breaker Drone§! jobs, complex drone that generates high amounts of £minerals£ §YMinerals§! (6) and £amenities_no_happiness£ §YAmenities§! (4).\n\n"
+
+
+ district_sm_glacial:0 "Glacial Exploitation"
+ district_sm_glacial_plural:0 "Glacial Exploitations"
+ district_sm_glacial_desc:0 "Remote regions of this planet, completely encased in solid and crystalline ice, used for specific mining operations and the extraction of valuable frozen components."
+ mod_district_sm_glacial_max:0 "Max £district£ $district_sm_glacial$ districts on regular planets:"
+
+ job_sm_icebreaker:0 "Ice-Breaker"
+ job_sm_icebreaker_plural:0 "Ice-Breakers"
+ job_sm_icebreaker_desc:0 "Trained specialists with the task of using unorthodox methods of obtaining valuable building and industrial materials with the use of ice, literal or figuratively."
+ job_sm_icebreaker_effect_desc:0 "£job_miner£ $job_sm_icebreaker_plural$ produce £minerals£ §Y$minerals$§! and £mod_trade_value_add£ §Y$TRADE_VALUE$§!." 
+ mod_job_sm_icebreaker_add:0 "$job_sm_icebreaker$ Jobs"
+ mod_job_sm_icebreaker_per_pop:0 "§G+1§! $job_sm_icebreaker$ Job per $VALUE$ Pops"
+ mod_job_sm_icebreaker_per_pop_short:0 "\n§G+1§! £mod_job_sm_icebreaker_add£ per $VALUE$ £pop£"
+
+ job_sm_icebreaker_drone:0 "Ice-Breaker Drone"
+ job_sm_icebreaker_drone_plural:0 "Ice-Breaker Drones"
+ job_sm_icebreaker_drone_desc:0 "Specially created drones whose task is extracting and processing valuable building and industrial materials with the use of ice and permafrost, literal or figuratively."
+ job_sm_icebreaker_drone_effect_desc:0 "£job_miner£ $job_sm_icebreaker_drone_plural$ produce £minerals£ §Y$minerals$§! and £amenities_no_happiness£ §YAmenities§!."
+ mod_job_sm_icebreaker_drone_add:0 "$job_sm_icebreaker_drone$ Jobs"
+ mod_job_sm_icebreaker_drone_per_pop:0 "§G+1§! $job_sm_icebreaker_drone$ Job per $VALUE$ Pops"
+ mod_job_sm_icebreaker_drone_per_pop_short:0 "\n§G+1§! £mod_job_sm_icebreaker_add£ per $VALUE$ £pop£"
+
+
+# ------------------------------------------------------------------------
+# Decisions
+ decision_sm_cryo_planet:0 "Cryogenize Planet"
+ decision_sm_cryo_planet_desc:0 "This planet will be reshaped to our own image, making it a new Cryogenic world."
+ decision_sm_cryo_planet_effects:0 "Starts a 10 years period after the decision is enacted to convert the planet into a $pc_sm_cryoworld$, §Ecooling§! the atmosphere and allowing §E$pc_sm_cryoworld$ pops§! to survive."
+
+
+ decision_sm_uncryo_planet:0 "De-Frost Planet"
+ decision_sm_uncryo_planet_desc:0 "This planet has been completely altered by strange methods, rendering teh surface near unhabitable by the sheer cold and permafrost, but we can repair it."
+ decision_sm_uncryo_planet_effects:0 "Undo the extreme climate changes done to the planet, resulting in a §YRandom§! world of its §Yprevious§! climate group type."
+
+# ------------------------------------------------------------------------
+# Modifiers
+ pm_sm_cryogenesis_1:0 "Early Cryogenization"
+ pm_sm_cryogenesis_1_desc:0 "The surface of this planet is being cooled down, rapidly."
+ pm_sm_cryogenesis_2:0 "Moderate Cryogenization"
+ pm_sm_cryogenesis_2_desc:0 "Several regions of this planet are completely covered by a permanent and cooler than usual permafrost."
+ pm_sm_cryogenesis_3:0 "Severe Cryogenization"
+ pm_sm_cryogenesis_3_desc:0 "Large parts of this planets are extremely frozen wastes, and the atmosphere is changing rapidly."
+ pm_sm_cryogenesis_4:0 "Cryogenic World"
+ pm_sm_cryogenesis_4_desc:0 "This world is unusually cold and hostile to most species and lifeforms."
+
+# ------------------------------------------------------------------------
+# Messages
+ MESSAGE_SM_CRYOTERRAFORMATION:1 "$PLANET|Y$ has been terraformed into a §YCryogenic§! World."
+ MESSAGE_SM_CRYOTERRAFORMATION_TITLE:0 "Cryogenesis"
+
+ MESSAGE_SM_DECRYOTERRAFORMATION:1 "$PLANET|Y$ has been terraformed into an §YHabitable§! World."
+ MESSAGE_SM_DECRYOTERRAFORMATION_TITLE:0 "Planet Restored"
+
+# ------------------------------------------------------------------------
+# Opinions
+ opinion_sm_cryogenized_a_world:0 "Cryogenized a World"
+ opinion_sm_cryogenized_my_world:0 "Cryogenized our World"
+ opinion_sm_cryogenized_a_primitive_world:0 "Cryogenized a Primitive World"
+ opinion_sm_cryogenized_a_primitive_world_phile:0 "$opinion_cracked_a_primitive_world_phile$"
+
+# ------------------------------------------------------------------------
+# MISC
+ SM_ICEPOPS_DIE_WITHOUT_COLD:0 "§RThe non-cold climate is ravaging the species integrity. Use a decision to §YCryogenize§! the planet, or inhabit a better world.§!"
+
+
+ PLANET_KILLER_SM_CRYORAY:0 "Cryogenic Ray"
+ PLANET_KILLER_SM_CRYORAY_ACTION:0 "Cryogenize"
+ PLANET_KILLER_SM_CRYORAY_DESC:0 "Intense cryo-zero rays are projected towards the surface of the planet, completely wiping out all artificial structures and non-cryogenic life forms. The intense cold waves and negative energy will also completely reform the planet surface, freezing it until it becomes a Cryogenic World."
+ FLEETORDER_DESTROY_PLANET_WITH_PLANET_KILLER_SM_CRYORAY:0 "Preparing to cryogenize $PLANET|Y$"
+ MESSAGE_DESC_FOR_PLANET_KILLER_SM_CRYORAY:0 "was cryogenized by"
+
+requires_purge_allowed_cryo:0 "§R$TRIGGER_FAIL$Requires §Y$purge_allowed$§! policy, as §YNon Cryogenic§! pops will be killed§!"
+ will_purge_non_cryo_pops:0 "§R§YNon Cryogenic§! pops will be killed§!"
+
+
+ d_sm_fixdistricts:0 "Cryogenized Resources"
+ d_sm_fixdistricts_desc:0 "This planet has a lot of accessible resources for the adequate species."
+
+# ------------------------------------------------------------------------
+# EVENTS
+ sm_elementals.501.name:0 "Planet Cryogenized"
+ sm_elementals.501.desc:0 "The cold waves were felt even outside the planet, as the [FromFrom.GetName] emmited the cryogenic energy directly towards the surface of [From.GetName].\n\nA wave of ice crystals shattered the surface, a tsunami of immense cold swept away any trace of whatever the surface was before, and now only perfect and calm ice remains."
+ sm_elementals.501.tooltip:0 "The planet becomes an §Y$pc_sm_cryoworld$§!.\nAll §YNon-Cryogenic§! pops are frozen until death."

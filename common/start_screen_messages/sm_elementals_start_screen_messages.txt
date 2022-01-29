@@ -1,0 +1,33 @@
+
+# Cryogenesis - Normal
+part = {
+	location = 0
+	localization = "START_SCREEN_POST_SM_CRYOGENESIS"
+
+	trigger = {
+		has_origin = origin_sm_cryogenesis
+		is_gestalt = no
+	}
+}
+
+# Cryogenesis - hive
+part = {
+	location = 0
+	localization = "START_SCREEN_POST_SM_CRYOGENESIS_HIVE"
+
+	trigger = {
+		has_origin = origin_sm_cryogenesis
+		is_hive_empire = yes
+	}
+}
+
+# Cryogenesis - machine
+part = {
+	location = 0
+	localization = "START_SCREEN_POST_SM_CRYOGENESIS_MACHINE"
+
+	trigger = {
+		has_origin = origin_sm_cryogenesis
+		is_machine_empire = yes
+	}
+}

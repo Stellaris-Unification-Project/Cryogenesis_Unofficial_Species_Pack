@@ -1,0 +1,124 @@
+
+# Regular
+civic_sm_iceminers = {
+	icon = gfx/interface/icons/government/civics/civic_sm_iceminers.dds
+	description = "civic_tooltip_sm_iceminers_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness }}
+		authority = { 
+			NOR = { 
+				value = auth_corporate
+				value = auth_tec_patrocorporate
+				value = auth_tec_ai_corporate
+			}
+		}
+	}
+	possible = {
+		origin = {
+			NOR = {
+				value = origin_post_apocalyptic
+				value = origin_shattered_ring
+				value = origin_void_dwellers
+				value = origin_remnants
+			}
+		}
+		civics = { 
+			NOR = { 
+				value = civic_anglers
+				value = civic_agrarian_idyll
+			} 
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		district_sm_glacial_max = 6
+	}
+}
+
+# Corporate
+civic_sm_corporate_iceminers = {
+	icon = gfx/interface/icons/government/civics/civic_sm_corporate_iceminers.dds
+	description = "civic_tooltip_sm_iceminers_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness }}
+		authority = { 
+			OR = { 
+				value = auth_corporate
+				value = auth_tec_patrocorporate
+				value = auth_tec_ai_corporate
+			}
+		}
+	}
+	possible = {
+		origin = {
+			NOR = {
+				value = origin_post_apocalyptic
+				value = origin_shattered_ring
+				value = origin_void_dwellers
+				value = origin_remnants
+			}
+		}
+		civics = { 
+			NOT = { 
+				value = civic_corporate_anglers
+			} 
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		district_sm_glacial_max = 6
+	}
+}
+
+
+# Hive
+civic_sm_hive_iceminers = {
+	icon = gfx/interface/icons/government/civics/civic_sm_hive_iceminers.dds
+	description = "civic_tooltip_sm_hive_iceminers_effects"
+	potential = {
+		ethics = { value = ethic_gestalt_consciousness }
+		authority = { value = auth_hive_mind }
+	}
+	possible = {
+		origin = {
+			NOR = {
+				value = origin_post_apocalyptic
+				value = origin_shattered_ring
+				value = origin_void_dwellers
+				value = origin_remnants
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_tec_hive_anglers
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		district_sm_glacial_max = 6
+	}
+}
+
+civic_sm_machine_iceminers = {
+	icon = gfx/interface/icons/government/civics/civic_sm_machine_iceminers.dds
+	description = "civic_tooltip_sm_machine_iceminers_effects"
+	potential = {
+		ethics = { value = ethic_gestalt_consciousness }
+		authority = { value = auth_machine_intelligence }
+	}
+	possible = {
+		origin = {
+			NOR = {
+				value = origin_post_apocalyptic
+				value = origin_shattered_ring
+				value = origin_void_dwellers
+				value = origin_remnants
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		district_sm_glacial_max = 6
+	}
+}

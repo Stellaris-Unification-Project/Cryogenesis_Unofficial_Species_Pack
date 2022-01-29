@@ -1,0 +1,91 @@
+#-----------------------------------------------------
+#	Cryogenesis
+decision_sm_cryo_planet = {
+	icon = decision_cold_barren_planet
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2000
+			influence = 50
+		}
+	}
+	enactment_time = 360
+	
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_sm_cryogenesis
+		}
+		is_colony = yes
+		OR = {
+			# This makes it only possible on basic planet types
+			is_wet = yes
+			is_dry = yes
+			is_cold = yes
+		}
+		NOR = {
+			is_planet_class = pc_sm_cryoworld
+			has_modifier = pm_sm_cryogenesis_1
+			has_modifier = pm_sm_cryogenesis_2
+			has_modifier = pm_sm_cryogenesis_3
+			has_modifier = pm_sm_cryogenesis_4
+		}
+		habitable_structure = no
+	}
+	
+	effect = {
+		custom_tooltip = decision_sm_cryo_planet_effects
+		#7200
+		hidden_effect = {
+			planet_event = {	# This chains itself
+				id = sm_elementals.10
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_sm_uncryo_planet = {
+	icon = decision_arctic_planet
+	resources = {
+		category = decisions
+		cost = {
+			energy = 10000
+			trigger = {
+				owner = {
+					is_ai = no
+					# cheesy but saves me from making eco categories here
+				}
+			}
+		}
+	}
+	enactment_time = 3600
+	
+	potential = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_origin = origin_sm_cryogenesis
+			}
+			has_technology = tech_climate_restoration
+		}
+		is_planet_class = pc_sm_cryoworld
+	}
+	
+	effect = {
+		custom_tooltip = decision_sm_uncryo_planet_effects
+		#7200
+		hidden_effect = {
+			planet_event = {
+				id = sm_elementals.15
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

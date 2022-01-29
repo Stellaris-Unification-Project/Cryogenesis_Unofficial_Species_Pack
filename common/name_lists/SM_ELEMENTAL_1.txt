@@ -1,0 +1,221 @@
+﻿
+#
+#SM_CRYO1 = {
+#	category = "Cryogenesis"
+#	ship_names = {
+#
+#		generic = {
+#			"Ice Shard" "Looming Iceberg" "Cool Icycle" "Dangerous Snow" "Frozen Reaver" "Piercing Frost" "Shard of Winter" "Sub-Zero" "Cryolator" "Cold Stalker" "Frozen Vengueance" "Zero Annihilator" "Icy Void" "Glacial Rider" "Gelid Vessel"
+#		}
+#
+#		corvette = {
+#		}
+#
+#		destroyer = {
+#		}
+#
+#		cruiser = {
+#		}
+#
+#		battleship = {
+#		}
+#
+#		titan = {
+#		}
+#
+#		colossus = {
+#		}
+#
+#		science = {
+#		}
+#
+#		colonizer = {
+#		}
+#
+#		constructor = {
+#		}
+#
+#		transport = {
+#		}
+#
+#		military_station_small = {
+#		}
+#
+#		ion_cannon = {
+#		}
+#	}
+#
+#	ship_class_names = {
+#		generic = {
+#			Icycle Monolith Mountain Shard Splinter Touch Grasp Breath Breeze Fog Deep 
+#		}
+#	}
+#
+#	fleet_names = {
+#		random_names = {
+#			"Frost Armada" "Frozen Armada" "Cold Armada" "Subzero Armada" "Winter Armada" "Spike Armada" "Monolith Armada"
+#		}
+#		sequential_name = "%O% Armada"
+#	}
+#
+#	army_names = {
+#
+#		machine_defense = {
+#			sequential_name = "%O% Ground Shield"
+#		}
+#
+#		machine_assault_1 = {
+#			sequential_name = "%O% War Guild"
+#		}
+#
+#		machine_assault_2 = {
+#			sequential_name = "%O% War Guild"
+#		}
+#
+#		machine_assault_3 = {
+#			sequential_name = "%O% War Guild"
+#		}
+#
+#		defense_army = {
+#			sequential_name = "%O% Ground Shield"
+#		}
+#
+#		assault_army = {
+#			sequential_name = "%O% War Guild"
+#		}
+#
+#		slave_army = {
+#			sequential_name = "%O% War Peons"
+#		}
+#
+#		clone_army = {
+#			sequential_name = "%O% Fresh Clones"
+#		}
+#
+#		undead_army = {
+#			sequential_name = "%O% Dread Peons"
+#		}
+#
+#		robotic_army = {
+#			sequential_name = "%O% Robotic Lancers"
+#		}
+#
+#		robotic_defense_army = {
+#			sequential_name = "%O% Robotic Protectors"
+#		}
+#
+#		psionic_army = {
+#			sequential_name = "%O% Icebenders"
+#		}
+#
+#		xenomorph_army = {
+#			sequential_name = "%O% Death Avalanche"
+#		}
+#
+#		gene_warrior_army = {
+#			sequential_name = "%O% Frostborne"
+#		}
+#
+#		occupation_army = {
+#			sequential_name = "%O% Occupation Shield"
+#		}
+#
+#		robotic_occupation_army = {
+#			sequential_name = "%O% Robotic Occupiers"
+#		}
+#
+#		primitive_army = {
+#			sequential_name = "Primitive Army %C%"
+#		}
+#		industrial_army = {
+#			sequential_name = "Industrial Army %C%"
+#		}
+#		postatomic_army = {
+#			sequential_name = "Post-Atomic Army %C%"
+#		}
+#	}
+#
+#	planet_names = {
+#
+#		generic = {
+#			names = {
+#				"Frost Keep" "Ice Home" "Frost Steppes" "Frostborn" "Gelid Sea" "Zero" "Frozen Treasure" "Gelid Home" "Cold Keep"
+#				"Fortress of Solitude" "Ice Citadel" "Subzero Mother" "Home of Winter" "Endless Steppes" "Negative"
+#			}
+#		}
+#
+#		pc_desert = {
+#			names = {
+#			}
+#		}
+#
+#		pc_tropical = {
+#			names = {
+#			}
+#		}
+#
+#		pc_arid = {
+#			names = {
+#			}
+#		}
+#
+#		pc_continental = {
+#			names = {
+#			}
+#		}
+#
+#		pc_ocean = {
+#			names = {
+#			}
+#		}
+#
+#		pc_tundra = {
+#			names = {
+#			}
+#		}
+#
+#		pc_arctic = {
+#			names = {
+#			}
+#		}
+#
+#		pc_savannah = {
+#			names = {
+#			}
+#		}
+#
+#		pc_alpine = {
+#			names = {
+#			}
+#		}
+#
+#	}
+#
+#	character_names = {
+#		default = {
+#			# A complete name
+#			full_names_male = {
+#				Ormbrand Hulgfnir Olfaarald Korssmar Lasshjolf Rigess Hokleid Olfrik Gollund Matver Botri Erdike Helvgas Filkir Rigess Logrrrid Hakotus Fjrlismod Gutae Vigdith Vibhild Orieling Sveneror
+#			}
+#			full_names_female = {
+#				Oddette Mabrika Mineior Serahild Sappar Joldlfrodi Eldair Finir Hreitilde Olftilde Merma Ronold Minly Irgny Lisbll Hukif Erdike Fanja Anisjorg Danika Nurnekke Ursirior
+#			}
+#
+#			# Always combined with a second name
+#			first_names = {
+#			}
+#
+#			# Always combined with a first name
+#			second_names = {
+#			}
+#
+#			regnal_first_names = {
+#				Ormbrand Hulgfnir Olfaarald Korssmar Lasshjolf Rigess Hokleid Olfrik Gollund Matver Botri
+#			}
+#
+#			regnal_second_names = {
+#				Frosttson Iceborn
+#			}
+#		}
+#	}
+#}

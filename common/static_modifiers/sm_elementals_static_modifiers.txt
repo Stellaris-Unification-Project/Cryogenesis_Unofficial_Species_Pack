@@ -1,0 +1,24 @@
+
+
+
+
+
+pm_sm_cryogenesis_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_sm_cryogenesis_1.dds"
+	icon_frame = 1
+}
+
+pm_sm_cryogenesis_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_sm_cryogenesis_1.dds"
+	icon_frame = 2
+}
+
+pm_sm_cryogenesis_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_sm_cryogenesis_1.dds"
+	icon_frame = 3
+}
+
+pm_sm_cryogenesis_4 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_sm_cryogenesis_1.dds"
+	icon_frame = 3
+}

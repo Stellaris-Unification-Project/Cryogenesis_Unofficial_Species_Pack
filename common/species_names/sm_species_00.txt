@@ -1,0 +1,100 @@
+# Generated species derive their names from here
+
+SM_ELEMENTAL = {
+	Fjor = {
+		name = Fjor
+		plural = Fjor
+		home_planet = Althuum
+		home_system = Thuum
+		name_list = "HUM1"
+	}
+
+	valanx = {
+		name = Valanx
+		plural = Valunx
+		home_planet = Vaalth
+		home_system = "Zarath Or"
+		name_list = "HUM2"
+	}
+
+	ishthu = {
+		name = "Ish Thu"
+		plural = "Ish Thus"
+		home_planet = Zuthan
+		home_system = Asghith
+		name_list = "MAM3"
+	}
+
+	coldar = {
+		name = Coldar
+		plural = Coldar
+		home_planet = "Arra Prime"
+		home_system = Arra
+		name_list = "MAM2"
+	}
+
+	stalagma = {
+		name = Stalagma
+		plural = Stalagma
+		home_planet = "Mit'e"
+		home_system = "Mit"
+		name_list = "REP1"
+	}
+
+	polax = {
+		name = Polax
+		plural = Polax
+		home_planet = "Xa'Valan"
+		home_system = "Valan"
+		name_list = "REP2"
+	}
+
+	# Added by greensniperhat from steam
+	Kringle = {
+		name = Kringle
+		plural = Kringles
+		home_planet = Kris
+		home_system = No'polle
+		name_list = "HUM3"
+	}
+
+	Noman = {
+		name = Noman
+		plural = Nomans
+		home_planet = Sno
+		home_system = Valanche
+		name_list = "HUM1"
+	}
+
+	Krampus = {
+		name = Krampus
+		plural = Krampuses
+		home_planet = Logg
+		home_system = Yool
+		name_list = "MAM2"
+	}
+
+	Blizz = {
+		name = Blizz
+		plural = Blizz
+		home_planet = Znoflek
+		home_system = Znoboll
+		name_list = "LITHOID4"
+	}
+
+	Yukionna = {
+		name = Yukionna
+		plural = Yukionnans
+		home_planet = Yuki
+		home_system = Samui
+		name_list = "NECROID1"
+	}
+
+	Winterchild = {
+		name = Winterchild
+		plural = Winterchildren
+		home_planet = Coldhome
+		home_system = Wintersun
+		name_list = "AVI4"
+	}
+}

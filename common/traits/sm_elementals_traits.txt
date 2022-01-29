@@ -1,0 +1,362 @@
+
+# TRAIT SORT NOTES:
+#sorting_priority = 20		# Defining trait
+#sorting_priority = 19		# Defining trait
+#sorting_priority = 15		# Key trait
+#sorting_priority = 14		# Key trait
+#sorting_priority = 10		# Relevant trait
+#sorting_priority = 5		# Relevant trait
+#sorting_priority = 4		# Expensive trait 2
+#sorting_priority = 3		# Expensive trait
+#sorting_priority = 2		# Regular expensive trait
+#sorting_priority = 1		# Regular trait
+#sorting_priority = 0		# Meaningless trait
+
+# --------------------------------------------------------
+# Habitability main trait
+trait_pc_sm_cryoworld_preference = {
+	sorting_priority = 20		# Defining trait
+	icon = "gfx/interface/icons/traits/trait_sm_cryogenesis.dds"
+	modification = no
+	initial = no
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+
+	modifier = {
+		# main
+		pc_sm_cryoworld_habitability = 2
+
+		# vanilla
+		pc_arctic_habitability = 0.6
+		pc_tundra_habitability = 0.6
+		pc_alpine_habitability = 0.6
+		# pd
+		pc_frozen_desert_habitability = 0.6
+		pc_glacial_habitability = 0.6
+		pc_antarctic_habitability = 0.6
+		pc_aeolian_habitability = 0.6
+
+		pc_storm_habitability = 0.6
+		pc_eyeball_habitability = 0.6
+
+		pc_swamp_habitability = 0.6
+		pc_mushroom_habitability = 0.6
+		pc_mud_habitability = 0.6
+		pc_basalt_habitability = 0.6
+
+		pc_rogue_habitability = 0.6
+		pc_lichen_habitability = 0.6
+
+		pc_boreal_habitability = 0.6
+		pc_snow_habitability = 0.6
+		pc_highland_habitability = 0.6
+		pc_duneforest_habitability = 0.6
+
+		pc_glacio_habitability = 0.6
+		pc_lanthanide_habitability = 0.6
+	}
+
+	custom_tooltip = "TRAIT_SM_CRYOGENESIS_EFFECT"
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { 
+				is_planet_class = pc_sm_cryoworld
+			}
+		}
+		planet_jobs_produces_mult = 0.1
+	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { 
+				OR = {
+					is_dry = yes
+					is_wet = yes
+				}
+			}
+		}
+		pop_environment_tolerance = -1
+		pop_purge_speed = 2.0
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	slave_cost = {
+		energy = 0
+	}
+}
+
+# Machines
+trait_sm_cryogenesis_machine = {
+	sorting_priority = 20		# Defining trait
+	icon = "gfx/interface/icons/traits/trait_sm_cryogenesis.dds"
+	modification = no
+	initial = no
+	allowed_archetypes = { ROBOT MACHINE }
+
+	modifier = {
+		# main
+		pc_sm_cryoworld_habitability = 2
+
+		# vanilla
+		pc_arctic_habitability = 0.6
+		pc_tundra_habitability = 0.6
+		pc_alpine_habitability = 0.6
+		# pd
+		pc_frozen_desert_habitability = 0.6
+		pc_glacial_habitability = 0.6
+		pc_antarctic_habitability = 0.6
+		pc_aeolian_habitability = 0.6
+
+		pc_storm_habitability = 0.6
+		pc_eyeball_habitability = 0.6
+
+		pc_swamp_habitability = 0.6
+		pc_mushroom_habitability = 0.6
+		pc_mud_habitability = 0.6
+		pc_basalt_habitability = 0.6
+
+		pc_rogue_habitability = 0.6
+		pc_lichen_habitability = 0.6
+
+		pc_boreal_habitability = 0.6
+		pc_snow_habitability = 0.6
+		pc_highland_habitability = 0.6
+		pc_duneforest_habitability = 0.6
+
+		pc_glacio_habitability = 0.6
+		pc_lanthanide_habitability = 0.6
+	}
+
+	custom_tooltip = "TRAIT_SM_CRYOGENESIS_EFFECT"
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { 
+				is_planet_class = pc_sm_cryoworld
+			}
+		}
+		planet_jobs_produces_mult = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { 
+				OR = {
+					is_dry = yes
+					is_wet = yes
+				}
+			}
+		}
+		pop_environment_tolerance = -1
+		pop_purge_speed = 2.0
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+	slave_cost = {
+		energy = 0
+	}
+}
+
+# --------------------------------------------------------
+# Non robot
+trait_sm_cryohibernation = {
+	sorting_priority = 5		# Relevant trait
+	icon = gfx/interface/icons/traits/trait_sm_cryohibernation.dds
+	cost = 2
+	potential_crossbreeding_chance = 0
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modification = yes
+	species_potential_add = {
+		exists = from
+		from = {
+			has_ascension_perk = ap_evolutionary_mastery
+		}
+	}
+	species_possible_remove = {
+		if = {
+			limit = {
+				exists = from
+			}
+			custom_tooltip = {
+				fail_text = trait_aquatic_remove_evolutionary_mastery
+				from = { has_ascension_perk = ap_evolutionary_mastery }
+			}
+		}
+	}
+	initial = yes
+	custom_tooltip = TRAIT_SM_CRYOHIBERNATION_EFFECT
+	triggered_pop_modifier = {	# Spring
+		potential = {
+			has_global_flag = sm_cryohibernation_spring_on
+		}
+		planet_jobs_produces_mult = 0.2
+		pop_amenities_usage_mult = 0.1
+	}
+	triggered_pop_modifier = {	# Spring
+		potential = {
+			NOT = {
+				has_global_flag = sm_cryohibernation_winter_off
+			}
+		}
+		planet_jobs_produces_mult = -0.05
+		pop_amenities_usage_mult = -0.1
+	}
+	slave_cost = {
+		energy = 150
+	}
+}
+
+trait_sm_cryothermophile = {
+	sorting_priority = 5		# Relevant trait
+	icon = gfx/interface/icons/traits/trait_sm_cryothermophile.dds
+	cost = 2
+	potential_crossbreeding_chance = 0
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modification = yes
+	species_potential_add = {
+		exists = from
+		from = {
+			has_ascension_perk = ap_evolutionary_mastery
+		}
+	}
+	species_possible_remove = {
+		if = {
+			limit = {
+				exists = from
+			}
+			custom_tooltip = {
+				fail_text = trait_aquatic_remove_evolutionary_mastery
+				from = { has_ascension_perk = ap_evolutionary_mastery }
+			}
+		}
+	}
+	initial = yes
+
+	allowed_planet_classes = {
+		# Vanilla
+		pc_arctic
+		pc_tundra
+		pc_alpine
+		# Planetary Diversity
+			pc_frozen_desert
+			pc_glacial
+			pc_antarctic
+			pc_aeolian
+
+			pc_storm
+			pc_eyeball
+
+			pc_swamp
+			pc_mushroom
+			pc_mud
+			pc_basalt	
+			
+			pc_rogue
+			pc_lichen
+			
+			pc_boreal
+			pc_snow
+			pc_highland
+			pc_duneforest
+			
+			pc_glacio
+			pc_lanthanide
+		# /
+		# Cryogenesis
+			pc_sm_cryoworld
+		# /
+	}
+
+
+	custom_tooltip = TRAIT_SM_CRYOTHERMOPHILE_EFFECT
+	triggered_pop_modifier = {	# Bonus on arctic planets
+		potential = {
+			exists = planet
+			planet = { 
+				OR = {
+					is_planet_class = pc_arctic
+					is_planet_class = pc_sm_cryoworld
+				}
+			}
+		}
+		planet_jobs_produces_mult = 0.1
+	}
+	triggered_pop_modifier = {	# Bonus on cold planets
+		potential = {
+			exists = planet
+			planet = { 
+				is_cold = yes
+			}
+		}
+		pop_environment_tolerance = 0.2
+		pop_amenities_usage_mult = -0.1
+	}
+	triggered_pop_modifier = {	# non cold planets
+		potential = {
+			exists = planet
+			planet = { 
+				is_cold = no
+			}
+		}
+		pop_environment_tolerance = -0.2
+	}
+	triggered_pop_modifier = {	# non cold planets
+		potential = {
+			exists = planet
+			planet = { 
+				is_dry = yes
+			}
+		}
+		planet_jobs_produces_mult = -0.1
+		pop_amenities_usage_mult = 0.1
+	}
+	slave_cost = {
+		energy = 150
+	}
+}
+
+# --------------------------------------------------------
+# Robot specific
+trait_sm_cryohibernation_robot = {
+	sorting_priority = 5		# Relevant trait
+	icon = gfx/interface/icons/traits/trait_sm_cryohibernation_machine.dds
+	cost = 2
+	potential_crossbreeding_chance = 0
+	allowed_archetypes = { MACHINE ROBOT }
+	modification = yes
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_technology = tech_droid_workers
+			}
+		}
+	}
+	initial = yes
+	custom_tooltip = TRAIT_SM_CRYOHIBERNATION_ROBOT_EFFECT
+	triggered_pop_modifier = {	# Spring
+		potential = {
+			has_global_flag = sm_cryohibernation_spring_on
+		}
+		planet_jobs_produces_mult = 0.2
+		planet_pops_upkeep_mult = 0.20
+	}
+	triggered_pop_modifier = {	# Spring
+		potential = {
+			NOT = {
+				has_global_flag = sm_cryohibernation_winter_off
+			}
+		}
+		planet_jobs_produces_mult = -0.05
+		planet_pops_upkeep_mult = -0.20
+	}
+	slave_cost = {
+		energy = 150
+	}
+}

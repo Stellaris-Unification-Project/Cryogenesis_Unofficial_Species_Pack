@@ -1,0 +1,17 @@
+
+# Fix to districts
+d_sm_fixdistricts = {
+	is_for_colonizable = yes
+	icon = d_sm_fixdistricts
+
+	planet_modifier = {
+		district_generator_max = 99
+		district_mining_max = 99
+		district_farming_max = 99
+		
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

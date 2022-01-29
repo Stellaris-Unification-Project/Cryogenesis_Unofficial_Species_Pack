@@ -1,0 +1,195 @@
+# -----------------------------------------------
+# By Zyralynn & Rodahtnov
+# ----------------------------------------------
+
+portraits = { # Elementals
+	# Ice elementals
+
+	# ----------- Lithoids
+	sm_elemental_01  = {	# Lithoid golem
+		entity = "portrait_lithoid_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			#"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_01_base.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_01_blue.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_01_c.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_01_d.dds"
+		}
+	}
+
+	sm_elemental_02  = {	# Lithoid angel
+		entity = "portrait_lithoid_04_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_02_base.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_02_purple.dds"
+		}
+	}
+
+	
+	sm_elemental_03  = {	# Lithoid lava
+		entity = "portrait_lithoid_02_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_03_base.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_03_nocrystals.dds"
+		}
+	}
+
+		#sm_elemental_03  = {	# Lithoid spider
+		#	entity = "portrait_lithoid_09_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_03_base.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_03_red.dds"
+		#	}
+		#}
+
+		#sm_elemental_04  = {
+		#	entity = "portrait_lithoid_12_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_04_base.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_lithoids/sm_elementals_ice_04_green.dds"
+		#	}
+		#}
+	# ----------- Mammalians
+	sm_elemental_05  = { # avian_slender_04 # Parrot
+		entity = "portrait_avian_04_entity"	clothes_selector = "avian_slender_clothes_01" hair_selector = "no_texture"
+		greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_base.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_purple.dds"
+		}
+	}
+
+	sm_elemental_06  = {	# Molluscoid squared
+		entity = "portrait_arthropoid_09_entity"	clothes_selector = "arthropoid_normal_clothes_01" hair_selector = "no_texture"
+		greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_base.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_brown.dds"
+		}
+	}
+
+	sm_elemental_07  = {	# Cat
+		entity = "portrait_mammalian_14_entity"	clothes_selector = "mammalian_massive_clothes_01" hair_selector = "no_texture"
+		greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_base.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_brown.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_c.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_d.dds"
+		}
+	}
+
+	sm_elemental_08  = {	# Fox
+		entity = "portrait_mammalian_03_entity"	clothes_selector = "mammalian_slender_01_clothes_01" hair_selector = "no_texture"
+		greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_08_base.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_08_gray.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_08_white.dds"
+		}
+	}
+
+		#sm_elemental_08  = {	# Spiky avian
+		#	entity = "portrait_mammalian_17_entity"	clothes_selector = "sm_elemental_07_clothes" hair_selector = "no_texture"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_08_base.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_08_gray.dds"
+		#	}
+		#}
+
+		#sm_elemental_09  = { # Clothes & details
+		#	entity = "portrait_human_male_01_entity"	clothes_selector = "sm_elementals_ice_09_m_clothes_01" hair_selector = "sm_elementals_ice_09_m_hair_01"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_09_m_base.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_09_m_2.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_09_m_3.dds"
+		#	}
+		#}
+		#sm_elemental_10  = { # Clothes & details
+		#	entity = "portrait_human_female_01_entity"	clothes_selector = "sm_elementals_ice_09_f_clothes_01" hair_selector = "sm_elementals_ice_09_f_hair_01"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_09_f_base.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_09_f_2.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_09_f_3.dds"
+		#	}
+		#}
+		#sm_elemental_11  = { # Dragon
+		#	entity = "portrait_reptilian_17_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_11_base.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_11_base_2.dds"
+		#	}
+		#}
+		#sm_elemental_12  = { # Star
+		#	entity = "portrait_molluscoid_17_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_12_base.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_12_base_2.dds"
+		#	}
+		#}
+	sm_elemental_13  = { # Yeti
+		entity = "portrait_mammalian_07_entity"	clothes_selector = "mammalian_massive_clothes_01" hair_selector = "no_texture"
+		greeting_sound = "molluscoid_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_13_base.dds"
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_13_base_2.dds"
+		}
+	}
+		#sm_elemental_14  = { # Aquatic robots
+		#	entity = "portrait_aquatic_machine_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_14_base.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_14_base_2.dds"
+		#	}
+		#}
+		#sm_elemental_15_m  = { # Elfs
+		#	entity = "humanoid_05_male_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_15_base_m.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_15_base_m_2.dds"
+		#	}
+		#}
+		#sm_elemental_15_f  = { # Elfs F
+		#	entity = "humanoid_05_female_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"
+		#	greeting_sound = "molluscoid_01_greetings" 
+		#	character_textures = {
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_15_base_f.dds"
+		#		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_human/sm_elementals_ice_15_base_f_2.dds"
+		#	}
+		#}
+
+	sm_elemental_50  = { # Robot
+		entity = "portrait_robot_01_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_human_greetings"
+		character_textures = {
+			"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_robots/sm_elementals_ice_50_base.dds"
+		}
+	}
+}
+
+	#"sm_elemental_01"	# lithoid_01
+	#"sm_elemental_02"	# lithoid_04
+	#"sm_elemental_03"	# lithoid_02
+	#"sm_elemental_04"	# lithoid_12
+	#"sm_elemental_05"	# avian_slender_04
+	#"sm_elemental_06"	# arthropoid_normal_09
+	#"sm_elemental_07"	# mammalian_massive_14
+	#"sm_elemental_08"	# mammalian_slender_03
+	#"sm_elemental_09"	# human_male_body_01	 - Human male
+	#"sm_elemental_10"	# human_male_body_01	 - Human female
+	#"sm_elemental_11"	# reptilian_17_green_red - Dragon
+	#"sm_elemental_12"	# human_male_body_01	 - Star
+	#"sm_elemental_13"	# human_male_body_01	 - Fungoid 10
+	#"sm_elemental_14"	# aquatic_machine		- Robot aquatics
+	#"sm_elemental_15"	# humanoid_05			 - Elfs
+	#"sm_elemental_16"	# humanoid_03	 		- humanoide 3

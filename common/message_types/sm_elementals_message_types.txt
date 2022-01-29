@@ -1,0 +1,20 @@
+
+message_type = {
+	key = "MESSAGE_SM_CRYOTERRAFORMATION"
+	icon = "GFX_message_terraforming"
+	icon_frame = 1
+
+	name = "MESSAGE_SM_CRYOTERRAFORMATION_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_SM_DECRYOTERRAFORMATION"
+	icon = "GFX_message_terraforming"
+	icon_frame = 1
+
+	name = "MESSAGE_SM_DECRYOTERRAFORMATION_TITLE"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}

@@ -1,0 +1,38 @@
+# -----------------------------------------------
+# By Zyralynn & Rodahtnov
+# ----------------------------------------------
+
+sm_ELEMENTAL = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	portraits = {
+		"sm_elemental_01"		# lithoid_01
+		"sm_elemental_02"		# lithoid_04
+		"sm_elemental_03"		# lithoid_09
+		#"sm_elemental_04"		# lithoid_12
+		"sm_elemental_05"		# avian_slender_04
+		"sm_elemental_06"		# arthropoid_normal_09
+		"sm_elemental_07"		# mammalian_massive_14
+		"sm_elemental_08"		# mammalian_massive_17_1
+		#"sm_elemental_09"		# human_male_body_01
+		#"sm_elemental_10"		# human_female_body_01
+		#"sm_elemental_11"		# portrait_reptilian_17_entity
+		#"sm_elemental_12"		# portrait_molluscoid_17_entity
+		"sm_elemental_13"		# portrait_mammalian_07_entity
+		#"sm_elemental_14"		# portrait_aquatic_machine_entity
+		#"sm_elemental_15_m"	# humanoid_05_male_01_entity
+		#"sm_elemental_15_f"	# humanoid_05_female_01_entity
+		#"sm_elemental_50"		# robot
+	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"sm_elemental_01"
+	}
+	
+	graphical_culture = mammalian_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+

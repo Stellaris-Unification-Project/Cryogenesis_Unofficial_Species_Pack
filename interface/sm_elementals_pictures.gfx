@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {	
+		name = "GFX_origin_sm_cryogenesis"
+		texturefile = "gfx/event_pictures/origins/origin_sm_cryogenesis.dds"
+		alwaystransparent = yes
+	}
+	
+
+	spriteType = {
+		name = "GFX_ship_part_sm_cryoray"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sm_cryoray.dds"
+	}
+
+}

@@ -1,0 +1,41 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+sm_fix_cryoworlds = {
+	length = 0
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = country
+	}
+
+	potential = {
+		NOT = {
+			has_global_flag = sm_fixed_cryoworlds
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_global_flag = sm_fixed_cryoworlds
+		}
+	}
+
+	effect = {
+		every_galaxy_planet = {
+			limit = {
+				is_planet_class = pc_sm_cryoworld
+				NOT = {
+					has_deposit = d_sm_fixdistricts
+				}
+			}
+			add_deposit = d_sm_fixdistricts
+		}
+		set_global_flag = sm_fixed_cryoworlds
+	}
+
+	ai_weight = {
+		weight = 1000000
+	}
+}

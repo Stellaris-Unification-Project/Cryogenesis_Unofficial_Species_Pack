@@ -1,0 +1,133 @@
+# -----------------------------------------------
+# By Zyralynn & Rodahtnov
+# ----------------------------------------------
+
+sm_elemental_05_clothes = {	
+	default = "gfx/transparent.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default ="gfx/transparent.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/transparent.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		default = "gfx/transparent.dds"
+		"gfx/transparent.dds"= { is_pop_category = purge }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_1.dds" 	= { OR = { is_pop_category = worker is_pop_category = slave is_pop_category = simple_drone }  }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_3.dds" 	= { OR = { is_pop_category = specialist is_pop_category = complex_drone } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_1.dds" 	= { is_pop_category = ruler }
+	}
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_3.dds" = { leader_class = scientist }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_1.dds" = { leader_class = general }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_1.dds" = { leader_class = admiral }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_2.dds" = { leader_class = governor }
+	}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/transparent.dds"
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_1.dds" = { owner = { has_militarist_government = yes } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_2.dds" = { owner = { has_generic_government = yes } }	
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_2.dds" = { owner = { has_pacifist_government = yes } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_2.dds" = { owner = { has_primitive_government = yes } }	
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_05_clothes_3.dds" = { owner = { has_materialist_government = yes } }
+	}
+}
+
+sm_elemental_05_hair = { 
+	default = "gfx/transparent.dds"
+}
+
+# ------
+sm_elemental_06_clothes = {	
+	default = "gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_1.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_2.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_2.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		default = "gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_2.dds"
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_1.dds" 	= { OR = { is_pop_category = worker is_pop_category = slave is_pop_category = simple_drone }  }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_3.dds" 	= { OR = { is_pop_category = specialist is_pop_category = complex_drone } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_1.dds" 	= { is_pop_category = ruler }
+	}
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_3.dds" = { leader_class = scientist }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_1.dds" = { leader_class = general }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_1.dds" = { leader_class = admiral }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_2.dds" = { leader_class = governor }
+	}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_2.dds"
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_1.dds" = { owner = { has_militarist_government = yes } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_2.dds" = { owner = { has_generic_government = yes } }	
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_2.dds" = { owner = { has_pacifist_government = yes } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_2.dds" = { owner = { has_primitive_government = yes } }	
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_06_clothes_3.dds" = { owner = { has_materialist_government = yes } }
+	}
+}
+
+sm_elemental_06_hair = { 
+	default = "gfx/transparent.dds"
+}
+
+# ------
+sm_elemental_07_clothes = {	
+	default = "gfx/transparent.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/transparent.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/transparent.dds"
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		default = "gfx/transparent.dds"
+		"gfx/transparent.dds"= { is_pop_category = purge }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_1.dds" 	= { OR = { is_pop_category = worker is_pop_category = slave is_pop_category = simple_drone }  }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_3.dds" 	= { OR = { is_pop_category = specialist is_pop_category = complex_drone } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_1.dds" 	= { is_pop_category = ruler }
+	}
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_3.dds" = { leader_class = scientist }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_1.dds" = { leader_class = general }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_1.dds" = { leader_class = admiral }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_2.dds" = { leader_class = governor }
+	}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/transparent.dds"
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_1.dds" = { owner = { has_militarist_government = yes } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_2.dds" = { owner = { has_generic_government = yes } }	
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_2.dds" = { owner = { has_pacifist_government = yes } }
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_2.dds" = { owner = { has_primitive_government = yes } }	
+		"gfx/models/portraits/sm_elementals/sm_ice/sm_ice_organics/sm_elementals_ice_07_clothes_3.dds" = { owner = { has_materialist_government = yes } }
+	}
+}
+
+sm_elemental_07_hair = { 
+	default = "gfx/transparent.dds"
+}

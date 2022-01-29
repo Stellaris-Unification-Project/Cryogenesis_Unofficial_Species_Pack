@@ -1,0 +1,45 @@
+# -----------------------------------------------
+# Design by Zyralynn & Rodahtnov
+# ----------------------------------------------
+
+on_game_start = {
+	events = {
+		sm_elementals.1				# Flag
+		sm_elementals.100			# Hybernation Control
+	}
+}
+
+on_game_start_country = {
+	events = {	
+		sm_elementals.5				# Cryogenesis Setup
+		sm_elementals.200			# Civic district replace
+	}
+}
+
+
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		sm_elementals.100			# Hybernation Control
+	}
+}
+
+
+
+# PK
+on_destroy_planet_with_PLANET_KILLER_SM_CRYORAY = {
+	events = {
+		sm_elementals.500			# Colossus ray
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_SM_CRYORAY_queued = {
+	events = {
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_SM_CRYORAY_unqueued = {
+	events = {
+	}
+}

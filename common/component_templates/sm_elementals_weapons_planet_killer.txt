@@ -1,0 +1,36 @@
+
+
+weapon_component_template = { # Cryoray
+	key = "PLANET_KILLER_SM_CRYORAY"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+	
+	# Stats
+		resources = {
+			category = ship_components
+			cost = {
+				alloys = 0
+			}
+		}
+		power = -7500
+		windup = { min = 90 max = 90 }
+		total_fire_time = 30
+	# / stats
+
+	valid_for_country = {
+		has_origin = origin_sm_cryogenesis
+	}
+
+	icon = GFX_ship_part_sm_cryoray
+	icon_frame = 1
+
+	size_restriction = { colossus }
+	component_set = "PLANET_KILLER_SM_CRYORAY"
+
+	planet_destruction_gfx = "planet_deluge_gfx"
+
+	ai_weight = {
+		factor = 10
+	}
+}
