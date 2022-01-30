@@ -18,7 +18,7 @@ can_destroy_planet_with_PLANET_KILLER_SM_CRYORAY = {
 		if = {
 			limit = { #Uninhabited and primitive planets are always fine, if own colony then check if pops would be purged
 				exists = owner
-				owner = { is_same_value = from.owner }
+				is_owned_by = from.owner
 				any_owned_species = {
 					NOR = { 
 						has_trait = trait_sm_cryogenesis_machine
@@ -58,7 +58,7 @@ can_destroy_planet_with_PLANET_KILLER_SM_CRYORAY = {
 		custom_tooltip = {
 			fail_text = primitives_not_in_borders
 			exists = space_owner
-			space_owner = { is_same_value = from.owner }
+			is_owned_by = from.owner
 		}
 		custom_tooltip = {
 			fail_text = primitives_not_full_interference
